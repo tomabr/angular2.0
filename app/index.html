@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <base href="/">
+    <title>Angular 2 - ToDo App</title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.87/traceur-runtime.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
+    <script>
+        //configure system loader
+        System.config({
+            defaultJSExtensions: true
+        });
+    </script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.36/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.36/router.dev.js"></script>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+
+
+  </head>
+  <body>
+    <header class="header">
+       <search></search>
+    </header>
+
+    <main class="main">
+      <div class="main__content">
+        <h1 class="main__title">Contact</h1>
+        <div class="main__inside">
+          <div class="main__text">
+            <div class="main__center">
+          Please read the contract and fill in the form to accept. Make sure you understand it and follow the instructions after accepting, to complete the partnership process.
+            </div>
+            <carousel></carousel>
+
+          </div>
+        </div>
+      </div>
+      
+      <app></app>
+    </main>
+
+    <script>
+      System.import('search');
+      System.import('carousel');
+      System.import('app');
+    </script>
+  </body>
+</html>

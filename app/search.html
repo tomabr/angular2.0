@@ -1,0 +1,12 @@
+<form [ng-form-model]="search" (submit)="onSubmit()" class="search">
+   <div class="search__content">
+		<div class="search__item">
+		  <div class="search__adon" id="basic-addon1"><button class="search__submit"><span class="search__icon" aria-hidden="true"></span></button></div>
+		  <input type="text" [ng-form-control]="search.input" class="search__input" placeholder="" aria-describedby="basic-addon1">
+		</div>
+  </div>
+  <button class="search__button">Add new chanel</button>
+</form>
+
+
+

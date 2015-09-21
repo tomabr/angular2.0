@@ -1,0 +1,173 @@
+<div class="container">
+    <form [ng-form-model]="form" (submit)="onSubmit()" class="form-inline">
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.fullName.valid && form.controls.fullName.touched">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" class="form-control" [ng-form-control]="form.controls.fullName" placeholder="new todo">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.telephone.valid && form.controls.telephone.touched && form.controls.telephone.hasError('invalideTelephone')">
+                <label for="telephone">Telephone</label>
+                <input id="telephone" type="tel" class="form-control" [ng-form-control]="form.controls.telephone" placeholder="telephone">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.address1.valid && form.controls.address1.touched">
+                <label for="address1">Address 1</label>
+                <input id="address1" class="form-control" [ng-form-control]="form.controls.address1" placeholder="Address 1">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.address2.valid && form.controls.address2.touched">
+                <label for="address2">Address 2</label>
+                <input id="address2" class="form-control" [ng-form-control]="form.controls.address2" placeholder="Address 2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.city.valid && form.controls.city.touched">
+                <label for="city">City</label>
+                <input id="city" class="form-control" [ng-form-control]="form.controls.city" placeholder="city">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.state.valid && form.controls.state.touched">
+                <label for="state">State</label>
+                <input id="state" class="form-control" [ng-form-control]="form.controls.state" placeholder="state">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.zip.valid && form.controls.zip.touched">
+                <label id="zip">Zip or postcode</label>
+                <input for="zip" class="form-control" [ng-form-control]="form.controls.zip" placeholder="zip">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls.country.valid && form.controls.country.touched">
+                <label id="country">Country</label>
+                <select for="country" class="form-control" [ng-form-control]="form.controls.country" placeholder="country">
+                    <option value="">--Please select--</option>
+                    <option *ng-for="#country of countryGroup" value="{{country}}">{{country}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <label>
+                    <input type="checkbox" [ng-form-control]="form.controls['18']" (click)="changeState(!form.controls['18'].value)" />I am over 18 years old</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <label>
+                    <input type="checkbox" [ng-form-control]="form.controls.copy">Copy address fields from above</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+		!form.controls.parent.controls.name.valid && form.controls.parent.controls.name.touched" [hidden]="!form.controls.copy.value">
+
+                <div [hidden]="!form.controls.copy.value">
+                    <label for="parent.name">Name parent or guardian</label>
+                    <input id="parent.name" class="form-control" [ng-form-control]="form.controls.parent.controls.name" placeholder="nameParent" [disabled]="form.controls['18'].value" value="{{form.controls.fullName.value}}">
+                </div>
+                <div [hidden]="form.controls.copy.value">
+                    <label for="parent.name">Name parent or guardian</label>
+                    <input id="parent.name" class="form-control" [ng-form-control]="form.controls.parent.controls.name" placeholder="nameParent" [disabled]="form.controls['18'].value">
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+		!form.controls.parent.controls.email.valid && form.controls.parent.controls.email.touched && form.controls.parent.controls.email.hasError('invalideEmail')">
+                <label for="parent.email">Email</label>
+                <input id="parent.email" type="email" class="form-control" [ng-form-control]="form.controls.parent.controls.email" placeholder="email" [disabled]="form.controls['18'].value">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.address1.valid && form.controls.parent.controls.address1.touched">
+                <div [hidden]="!form.controls.copy.value">
+                    <label for="parent.address1">Address 1</label>
+                    <input id="parent.address1" class="form-control" [ng-form-control]="form.controls.parent.controls.address1" placeholder="Address1" [disabled]="form.controls['18'].value" value="{{form.controls.address1.value}}">
+                </div>
+                <div [hidden]="form.controls.copy.value">
+                    <label for="parent.address1">Address 1</label>
+                    <input id="parent.address1" class="form-control" [ng-form-control]="form.controls.parent.controls.address1" placeholder="Address1" [disabled]="form.controls['18'].value">
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.address2.valid && form.controls.parent.controls.address2.touched">
+                <div [hidden]="!form.controls.copy.value">
+                    <label for="parent.address2">Address 2</label>
+                    <input id="parent.address2" class="form-control" [ng-form-control]="form.controls.parent.controls.address2" placeholder="Address2" [disabled]="form.controls['18'].value" value="{{form.controls.address2.value}}">
+                </div>
+                <div [hidden]="form.controls.copy.value">
+                    <label for="parent.address2">Address 2</label>
+                    <input id="parent.address2" class="form-control" [ng-form-control]="form.controls.parent.controls.address2" placeholder="Address2" [disabled]="form.controls['18'].value">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.city.valid && form.controls.parent.controls.city.touched">
+                <div [hidden]="!form.controls.copy.value">
+                    <label for="parent.city">City</label>
+                    <input id="parent.city" class="form-control" [ng-form-control]="form.controls.parent.controls.city" placeholder="City" [disabled]="form.controls['18'].value" value="{{form.controls.city.value}}">
+                </div>
+                <div [hidden]="form.controls.copy.value">
+                    <label for="parent.city">City</label>
+                    <input id="parent.city" class="form-control" [ng-form-control]="form.controls.parent.controls.city" placeholder="City" [disabled]="form.controls['18'].value">
+                </div>
+                <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.state.valid && form.controls.parent.controls.state.touched">
+                    <div [hidden]="!form.controls.copy.value">
+                        <label for="parent.state">State</label>
+                        <input id="parent.state" class="form-control" [ng-form-control]="form.controls.parent.controls.state" placeholder="State" [disabled]="form.controls['18'].value" value="{{form.controls.state.value}}">
+                    </div>
+                    <div [hidden]="form.controls.copy.value">
+                        <label for="parent.state">State</label>
+                        <input id="parent.state" class="form-control" [ng-form-control]="form.controls.parent.controls.state" placeholder="State" [disabled]="form.controls['18'].value">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.zip.valid && form.controls.parent.controls.zip.touched">
+                    <div [hidden]="!form.controls.copy.value">
+                        <label for="parent.zip">Zip or postcode</label>
+                        <input id="parent.zip" class="form-control" [ng-form-control]="form.controls.parent.controls.zip" placeholder="State" [disabled]="form.controls['18'].value" value="{{form.controls.zip.value}}">
+                    </div>
+                    <div [hidden]="form.controls.copy.value">
+                        <label for="parent.zip">Zip or postcode</label>
+                        <input id="parent.zip" class="form-control" [ng-form-control]="form.controls.parent.controls.zip" placeholder="State" [disabled]="form.controls['18'].value">
+                    </div>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.country.valid && form.controls.parent.controls.country.touched">
+                    <div [hidden]="!form.controls.copy.value">
+                        <label for="parent.country">Country</label>
+                        <select id="parent.coutnry" class="form-control" [ng-form-control]="form.controls.parent.controls.country" placeholder="country" [disabled]="form.controls['18'].value">
+                            <option value="">--Please select--</option>
+                            <option value="{{form.controls.country.value}}">{{form.controls.country.value}}</option>
+                        </select>
+                    </div>
+                    <div [hidden]="form.controls.copy.value">
+                        <label for="parent.country">Country</label>
+                        <select id="parent.country" class="form-control" [ng-form-control]="form.controls.parent.controls.country" placeholder="country" [disabled]="form.controls['18'].value">
+                            <option value="">--Please select--</option>
+                            <option *ng-for="#country of countryGroup" value="{{country}}">{{country}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6" [class.has-error]="!form.controls['18'].value &&
+	!form.controls.parent.controls.telephone.valid && form.controls.parent.controls.telephone.touched && form.controls.parent.controls.telephone.hasError('invalideTelephone')">
+                    <div [hidden]="!form.controls.copy.value">
+                        <label for="parent.telephone">Telephone</label>
+                        <input id="parent.telephone" class="form-control" [ng-form-control]="form.controls.parent.controls.telephone" placeholder="Telephone" [disabled]="form.controls['18'].value" value="{{form.controls.telephone.value}}">
+                    </div>
+                    <div [hidden]="form.controls.copy.value">
+                        <label for="parent.telephone">Telephone</label>
+                        <input id="parent.telephone" class="form-control" [ng-form-control]="form.controls.parent.controls.telephone" placeholder="Telephone" [disabled]="form.controls['18'].value">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="btn btn-primary pull-right" type="submit" [disabled]="!form.valid">Add Todo</button>
+                </div>
+            </div>
+    </form>
+</div>
