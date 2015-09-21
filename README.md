@@ -1,5 +1,5 @@
 # angular2.0
-## Instaltion
+## Install
 ###
 ```
 npm install 
