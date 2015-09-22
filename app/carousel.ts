@@ -17,9 +17,9 @@ export class CarouselComponent {
   images: Array<Object>;
   constructor( ) {
     this.images = [
-    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: 'active'}, 
+    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: 'active'},
     {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''},
-    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''}];
+    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''} ];
   }
 }
 bootstrap(CarouselComponent);

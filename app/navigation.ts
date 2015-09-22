@@ -15,12 +15,11 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control} from 'a
 
 export class NavigationComponent {
   menu: Array<Object>;
+  accounts: Array<Object>;
   support: Array<Object>;
-  slide:boolean;
+  slide:number;
   constructor( ) {
-
-    this.slide=1;
-
+    this.slide = 1;
     this.menu = [
     {name : 'Dashboard', elem: [], sprite: 'sprite-dashboard'},
     {name : 'Rankings', elem: [], sprite: 'sprite-rankings'},
@@ -29,34 +28,31 @@ export class NavigationComponent {
     {name : 'Guides', elem: [], sprite: 'sprite-guides'},
     {name : 'Training', elem: [], sprite: 'sprite-training'},
     ];
-
     this.accounts = [
     {name : 'Support', elem: [], sprite: 'sprite-support', state:0},
     {name : 'Messages', elem: [], badge: 4, sprite: 'sprite-messages', state:0},
-    {name : 'Settings', sprite: 'sprite-settings', state:0, elem: [{name: 'Personal Information'},{name: 'Password'},{name:'Contact'}]},
+    {name : 'Settings', sprite: 'sprite-settings', state:0, elem: [ {name: 'Personal Information'}, {name: 'Password'}, {name:'Contact'}]},
     {name : 'Logout', elem: [], state:0, sprite: 'sprite-logout'}
     ];
   }
   toogleItems(el) {
 		  el.state = !el.state;
   }
-  active(el){
-      if(el==1){
-       return '_active';
-      }
-      else{
-       return '';
-      }
-  }
-  tiggerPanel(el){
-    if(el==1){
-       return 'navigation _show';
-      }
-      else{
-       return 'navigation _hide';
+  active(el) {
+      if (el === 1) {
+        return '_active';
+      } else {
+        return '';
       }
   }
-  changePanel(el){
+  tiggerPanel(el) {
+    if (el === 1) {
+        return 'navigation _show';
+      } else {
+        return 'navigation _hide';
+      }
+  }
+  changePanel(el) {
       this.slide = el;
   }
 }

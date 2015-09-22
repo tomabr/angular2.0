@@ -33,7 +33,7 @@ var NavigationComponent = (function () {
         el.state = !el.state;
     };
     NavigationComponent.prototype.active = function (el) {
-        if (el == 1) {
+        if (el === 1) {
             return '_active';
         }
         else {
@@ -41,7 +41,7 @@ var NavigationComponent = (function () {
         }
     };
     NavigationComponent.prototype.tiggerPanel = function (el) {
-        if (el == 1) {
+        if (el === 1) {
             return 'navigation _show';
         }
         else {
