@@ -11,17 +11,18 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control} from 'a
   templateUrl: 'carousel.html',
   directives: [FORM_DIRECTIVES, NgFor, NgIf]
 })
-export class AppComponent {
-  form: ControlGroup;
 
-  constructor(fb: FormBuilder) {
 
-    this.carousel = fb.group({
-      input: ['', Validators.required],
-    });
+export class CarouselComponent {
+  images: Array<Object>;
+  constructor( ) {
+    this.images = [
+    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: 'active'}, 
+    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''},
+    {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''}];
   }
   onSubmit() {
 		  alert('tak');
   }
 }
-bootstrap(AppComponent);
+bootstrap(CarouselComponent);

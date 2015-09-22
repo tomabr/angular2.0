@@ -11,17 +11,16 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control} from 'a
   templateUrl: 'search.html',
   directives: [FORM_DIRECTIVES, NgFor, NgIf]
 })
-export class AppComponent {
-  form: ControlGroup;
+export class SearchComponent {
+  search: ControlGroup;
 
   constructor(fb: FormBuilder) {
-   
     this.search = fb.group({
-      input: ['', Validators.required],
+      input: ['', Validators.required]
     });
   }
   onSubmit() {
 		  alert('tak');
   }
 }
-bootstrap(AppComponent);
+bootstrap(SearchComponent);

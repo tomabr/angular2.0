@@ -11,29 +11,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var angular2_2 = require('angular2/angular2');
-var SearchComponent = (function () {
-    function SearchComponent(fb) {
-        this.search = fb.group({
-            input: ['', angular2_2.Validators.required]
-        });
+var NavigationComponent = (function () {
+    function NavigationComponent() {
+        this.menu = [
+            { name: 'Dashboard', elem: [] },
+            { name: 'Rankings', elem: [] },
+            { name: 'Analytics', elem: [] },
+            { name: 'Apps', elem: [] },
+            { name: 'Guides', elem: [] },
+            { name: 'Training', elem: [] },
+        ];
+        this.accounts = [
+            { name: 'Support', elem: [] },
+            { name: 'Messages', elem: [], badge: 4 },
+            { name: 'Settings', elem: [{ name: 'Personal Information' }, { name: 'Password' }, { name: 'Contact' }] },
+            { name: 'Logout', elem: [] }
+        ];
     }
-    SearchComponent.prototype.onSubmit = function () {
+    NavigationComponent.prototype.onSubmit = function () {
         alert('tak');
     };
-    SearchComponent = __decorate([
+    NavigationComponent = __decorate([
         angular2_1.Component({
-            selector: 'search',
+            selector: 'navigation',
             viewBindings: [angular2_2.FormBuilder]
         }),
         angular2_1.View({
-            templateUrl: 'search.html',
+            templateUrl: 'navigation.html',
             directives: [angular2_2.FORM_DIRECTIVES, angular2_1.NgFor, angular2_1.NgIf]
         }), 
-        __metadata('design:paramtypes', [angular2_2.FormBuilder])
-    ], SearchComponent);
-    return SearchComponent;
+        __metadata('design:paramtypes', [])
+    ], NavigationComponent);
+    return NavigationComponent;
 })();
-exports.SearchComponent = SearchComponent;
-angular2_1.bootstrap(SearchComponent);
+exports.NavigationComponent = NavigationComponent;
+angular2_1.bootstrap(NavigationComponent);
 
-//# sourceMappingURL=search.js.map
+//# sourceMappingURL=navigation.js.map

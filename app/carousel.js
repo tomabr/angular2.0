@@ -11,16 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var angular2_2 = require('angular2/angular2');
-var AppComponent = (function () {
-    function AppComponent(fb) {
-        this.carousel = fb.group({
-            input: ['', angular2_2.Validators.required],
-        });
+var CarouselComponent = (function () {
+    function CarouselComponent() {
+        this.images = [
+            { src: 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: 'active' },
+            { src: 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: '' },
+            { src: 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: '' }];
     }
-    AppComponent.prototype.onSubmit = function () {
+    CarouselComponent.prototype.onSubmit = function () {
         alert('tak');
     };
-    AppComponent = __decorate([
+    CarouselComponent = __decorate([
         angular2_1.Component({
             selector: 'carousel',
             viewBindings: [angular2_2.FormBuilder]
@@ -29,11 +30,11 @@ var AppComponent = (function () {
             templateUrl: 'carousel.html',
             directives: [angular2_2.FORM_DIRECTIVES, angular2_1.NgFor, angular2_1.NgIf]
         }), 
-        __metadata('design:paramtypes', [angular2_2.FormBuilder])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], CarouselComponent);
+    return CarouselComponent;
 })();
-exports.AppComponent = AppComponent;
-angular2_1.bootstrap(AppComponent);
+exports.CarouselComponent = CarouselComponent;
+angular2_1.bootstrap(CarouselComponent);
 
 //# sourceMappingURL=carousel.js.map
