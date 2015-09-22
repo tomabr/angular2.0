@@ -17,7 +17,7 @@ export class NavigationComponent {
   menu: Array<Object>;
   support: Array<Object>;
   constructor( ) {
-    
+
     this.menu = [
     {name : 'Dashboard', elem: [], sprite: 'sprite-dashboard'},
     {name : 'Rankings', elem: [], sprite: 'sprite-rankings'},
@@ -36,6 +36,14 @@ export class NavigationComponent {
   }
   toogleItems(el) {
 		  el.state = !el.state;
+  }
+  active(el){
+      if(el==1){
+       return '_active';
+      }
+      else{
+       return '';
+      }
   }
 }
 bootstrap(NavigationComponent);

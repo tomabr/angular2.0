@@ -9334,20 +9334,28 @@ button.close {
 .carousel .carousel-indicators {
   bottom: 40px;
 }
-/* line 248, ../../assets/stylesheets/app.scss */
+/* line 244, ../../assets/stylesheets/app.scss */
+.carousel .carousel-indicators .carousel-indicators-item {
+  background: #fff;
+}
+/* line 247, ../../assets/stylesheets/app.scss */
+.carousel .carousel-indicators .carousel-indicators-item.active {
+  background: #1f2026;
+}
+/* line 256, ../../assets/stylesheets/app.scss */
 .carousel .carousel__control._left {
   background: none;
   left: -40px;
   top: -100px;
 }
-/* line 255, ../../assets/stylesheets/app.scss */
+/* line 263, ../../assets/stylesheets/app.scss */
 .carousel .carousel__control._right {
   background: none;
   right: -40px;
   top: -100px;
 }
 
-/* line 277, ../../assets/stylesheets/app.scss */
+/* line 285, ../../assets/stylesheets/app.scss */
 .navigation {
   position: relative;
   float: left;
@@ -9366,13 +9374,13 @@ button.close {
   position: fixed !important;
 }
 @media (min-width: 992px) {
-  /* line 277, ../../assets/stylesheets/app.scss */
+  /* line 285, ../../assets/stylesheets/app.scss */
   .navigation {
     float: left;
     width: 16.66667%;
   }
 }
-/* line 287, ../../assets/stylesheets/app.scss */
+/* line 295, ../../assets/stylesheets/app.scss */
 .navigation .navigation__section-title {
   color: #1f2026;
   font-size: inherit;
@@ -9380,15 +9388,15 @@ button.close {
   padding-left: 15px;
   text-transform: uppercase;
 }
-/* line 296, ../../assets/stylesheets/app.scss */
+/* line 304, ../../assets/stylesheets/app.scss */
 .navigation .navigation__section {
   width: 100%;
 }
-/* line 300, ../../assets/stylesheets/app.scss */
+/* line 308, ../../assets/stylesheets/app.scss */
 .navigation .navigation__logo {
   text-align: center;
 }
-/* line 304, ../../assets/stylesheets/app.scss */
+/* line 312, ../../assets/stylesheets/app.scss */
 .navigation .navigation__badge {
   text-align: right;
   float: right;
@@ -9396,42 +9404,43 @@ button.close {
   color: #fff;
   background: #e65660;
 }
-/* line 313, ../../assets/stylesheets/app.scss */
+/* line 321, ../../assets/stylesheets/app.scss */
 .navigation .navigation__arrow {
   float: right;
   border-radius: 50px;
   color: #666a7f;
   margin-right: 4px;
 }
-/* line 322, ../../assets/stylesheets/app.scss */
+/* line 330, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group {
   border-radius: 0;
 }
-/* line 326, ../../assets/stylesheets/app.scss */
+/* line 334, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside {
   margin-bottom: 0;
 }
-/* line 328, ../../assets/stylesheets/app.scss */
+/* line 336, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside .navigation__item {
   padding-left: 15px;
   text-transform: none;
   background: #272a36;
   border-bottom: 2px solid #363946;
 }
-/* line 335, ../../assets/stylesheets/app.scss */
+/* line 343, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside .navigation__item:hover, .navigation .navigation__group._inside .navigation__item:focus {
   background: #272a36;
 }
-/* line 342, ../../assets/stylesheets/app.scss */
+/* line 350, ../../assets/stylesheets/app.scss */
 .navigation .navigation__image {
-  height: 15px;
+  height: 17px;
   width: 25px;
   display: inline-block;
   overflow: auto;
   margin-right: 10px;
 }
-/* line 351, ../../assets/stylesheets/app.scss */
+/* line 359, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item {
+  line-height: 17px;
   background: #363946;
   border: none;
   border-radius: 0 !important;
@@ -9479,27 +9488,31 @@ button.close {
 .navigation .navigation__item .sprite-training {
   background-position: 0 -165px;
 }
-/* line 362, ../../assets/stylesheets/app.scss */
+/* line 373, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item > a {
   color: inherit !important;
   display: inline-block;
   text-decoration: none;
   width: 100%;
-  padding: 0 15px;
+  padding: 5px 15px;
 }
-/* line 370, ../../assets/stylesheets/app.scss */
+/* line 380, ../../assets/stylesheets/app.scss */
+.navigation .navigation__item > a._active {
+  background: #272a36;
+}
+/* line 385, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item._many {
   padding-bottom: 0;
 }
-/* line 372, ../../assets/stylesheets/app.scss */
+/* line 387, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item._many > a {
   padding-bottom: 8px;
 }
-/* line 378, ../../assets/stylesheets/app.scss */
+/* line 393, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item:hover, .navigation .navigation__item:focus {
   background: inherit;
 }
-/* line 383, ../../assets/stylesheets/app.scss */
+/* line 398, ../../assets/stylesheets/app.scss */
 .navigation ._account {
   margin-top: 165px;
 }

@@ -31,6 +31,14 @@ var NavigationComponent = (function () {
     NavigationComponent.prototype.toogleItems = function (el) {
         el.state = !el.state;
     };
+    NavigationComponent.prototype.active = function (el) {
+        if (el == 1) {
+            return '_active';
+        }
+        else {
+            return '';
+        }
+    };
     NavigationComponent = __decorate([
         angular2_1.Component({
             selector: 'navigation',
