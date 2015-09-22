@@ -49,7 +49,7 @@ var AppComponent = (function () {
         this.formButton = value;
     };
     AppComponent.prototype.onSubmit = function () {
-        alert('tak');
+        ;
     };
     AppComponent = __decorate([
         angular2_1.Component({

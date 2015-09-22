@@ -17,9 +17,9 @@ export class NavigationComponent {
   menu: Array<Object>;
   accounts: Array<Object>;
   support: Array<Object>;
-  slide:number;
+  slide:boolean;
   constructor( ) {
-    this.slide = 1;
+    this.slide = true;
     this.menu = [
     {name : 'Dashboard', elem: [], sprite: 'sprite-dashboard'},
     {name : 'Rankings', elem: [], sprite: 'sprite-rankings'},
@@ -39,14 +39,11 @@ export class NavigationComponent {
 		  el.state = !el.state;
   }
   active(el) {
-      el = parseInt(el,10);
-      return (el === 1) ? '_active' :  '';
-      
+
+      return (!!el) ? '_active' :  null;
   }
   tiggerPanel(el) {
-     el = parseInt(el,10);
-    return (el === 1) ? 'navigation _show' : 'navigation _hide';
-      
+     return (!!el) ? 'navigation _show' : 'navigation _hide';
   }
   changePanel(el) {
       this.slide = el;

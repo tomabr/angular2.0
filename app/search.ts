@@ -20,7 +20,7 @@ export class SearchComponent {
     });
   }
   onSubmit() {
-		  alert('tak');
+		 ;
   }
 }
 bootstrap(SearchComponent);

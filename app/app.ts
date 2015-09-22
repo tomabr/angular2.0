@@ -54,7 +54,7 @@ export class AppComponent {
        this.formButton = value;
   }
 	onSubmit() {
-		  alert('tak');
+		  ;
 	}
 }
 bootstrap(AppComponent);
