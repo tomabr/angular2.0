@@ -46,7 +46,7 @@ export class NavigationComponent {
       }
   }
   tiggerPanel(el) {
-    if (el === 1) {
+    if (el == 1) {
         return 'navigation _show';
       } else {
         return 'navigation _hide';

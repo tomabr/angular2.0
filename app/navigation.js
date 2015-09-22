@@ -41,7 +41,7 @@ var NavigationComponent = (function () {
         }
     };
     NavigationComponent.prototype.tiggerPanel = function (el) {
-        if (el === 1) {
+        if (el == 1) {
             return 'navigation _show';
         }
         else {
