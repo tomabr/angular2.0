@@ -39,7 +39,7 @@ export class NavigationComponent {
 		  el.state = !el.state;
   }
   active(el) {
-      if (el === 1) {
+      if (el == 1) {
         return '_active';
       } else {
         return '';

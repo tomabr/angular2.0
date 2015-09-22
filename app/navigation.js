@@ -33,7 +33,7 @@ var NavigationComponent = (function () {
         el.state = !el.state;
     };
     NavigationComponent.prototype.active = function (el) {
-        if (el === 1) {
+        if (el == 1) {
             return '_active';
         }
         else {
