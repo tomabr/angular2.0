@@ -9366,16 +9366,55 @@ button.close {
   top: 0;
   left: 0;
   z-index: 1000;
+  /* Standard syntax */
+  /* Chrome, Safari, Opera */
+  /* Standard syntax */
 }
 /* line 297, ../../assets/stylesheets/app.scss */
 .navigation._show {
   left: 0;
+  -webkit-animation: 0.5s slide-down;
+  animation: 0.5s slide-down;
 }
-/* line 301, ../../assets/stylesheets/app.scss */
+/* line 303, ../../assets/stylesheets/app.scss */
 .navigation._hide {
   left: -190px;
+  -webkit-animation: 0.5s slide-up;
+  animation: 0.5s slide-up;
 }
-/* line 305, ../../assets/stylesheets/app.scss */
+@-webkit-keyframes slide-up {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -190px;
+  }
+}
+@keyframes slide-up {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -190px;
+  }
+}
+@-webkit-keyframes slide-down {
+  0% {
+    left: -190px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slide-down {
+  0% {
+    left: -190px;
+  }
+  100% {
+    left: 0;
+  }
+}
+/* line 338, ../../assets/stylesheets/app.scss */
 .navigation .navigation__section-title {
   color: #1f2026;
   font-size: inherit;
@@ -9383,15 +9422,15 @@ button.close {
   padding-left: 15px;
   text-transform: uppercase;
 }
-/* line 314, ../../assets/stylesheets/app.scss */
+/* line 347, ../../assets/stylesheets/app.scss */
 .navigation .navigation__section {
   width: 100%;
 }
-/* line 318, ../../assets/stylesheets/app.scss */
+/* line 351, ../../assets/stylesheets/app.scss */
 .navigation .navigation__logo {
   text-align: center;
 }
-/* line 322, ../../assets/stylesheets/app.scss */
+/* line 355, ../../assets/stylesheets/app.scss */
 .navigation .navigation__badge {
   text-align: right;
   float: right;
@@ -9399,33 +9438,33 @@ button.close {
   color: #fff;
   background: #e65660;
 }
-/* line 331, ../../assets/stylesheets/app.scss */
+/* line 364, ../../assets/stylesheets/app.scss */
 .navigation .navigation__arrow {
   float: right;
   border-radius: 50px;
   color: #666a7f;
   margin-right: 4px;
 }
-/* line 340, ../../assets/stylesheets/app.scss */
+/* line 373, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group {
   border-radius: 0;
 }
-/* line 344, ../../assets/stylesheets/app.scss */
+/* line 377, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside {
   margin-bottom: 0;
 }
-/* line 346, ../../assets/stylesheets/app.scss */
+/* line 379, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside .navigation__item {
   padding-left: 15px;
   text-transform: none;
   background: #272a36;
   border-bottom: 2px solid #363946;
 }
-/* line 353, ../../assets/stylesheets/app.scss */
+/* line 386, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside .navigation__item:hover, .navigation .navigation__group._inside .navigation__item:focus {
   background: #272a36;
 }
-/* line 360, ../../assets/stylesheets/app.scss */
+/* line 393, ../../assets/stylesheets/app.scss */
 .navigation .navigation__image {
   height: 17px;
   width: 25px;
@@ -9433,7 +9472,7 @@ button.close {
   overflow: auto;
   margin-right: 10px;
 }
-/* line 369, ../../assets/stylesheets/app.scss */
+/* line 402, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item {
   line-height: 17px;
   background: #363946;
@@ -9483,7 +9522,7 @@ button.close {
 .navigation .navigation__item .sprite-training {
   background-position: 0 -165px;
 }
-/* line 383, ../../assets/stylesheets/app.scss */
+/* line 416, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item > a {
   color: inherit !important;
   display: inline-block;
@@ -9491,24 +9530,24 @@ button.close {
   width: 100%;
   padding: 5px 15px;
 }
-/* line 390, ../../assets/stylesheets/app.scss */
+/* line 423, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item > a._active {
   background: #272a36;
   border-bottom: 2px solid #363946;
 }
-/* line 396, ../../assets/stylesheets/app.scss */
+/* line 429, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item._many {
   padding-bottom: 0;
 }
-/* line 398, ../../assets/stylesheets/app.scss */
+/* line 431, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item._many > a {
   padding-bottom: 8px;
 }
-/* line 404, ../../assets/stylesheets/app.scss */
+/* line 437, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item:hover, .navigation .navigation__item:focus {
   background: inherit;
 }
-/* line 409, ../../assets/stylesheets/app.scss */
+/* line 442, ../../assets/stylesheets/app.scss */
 .navigation ._account {
   margin-top: 165px;
 }
