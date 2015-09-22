@@ -1,9 +1,9 @@
-    <nav class="navigation">
-      <h2 class="navigation__logo">BentPixels</h2>
+    <nav>
+      <h2 class="navigation__logo"><img src="images/logo.png" alt="BentPixels"></h2>
       <section class="navigation__section">
         <h3 class="navigation__section-title">Main</h3>
         <ul class="navigation__group">
-            <li class="navigation__item _many" *ng-for="#item of menu"><a href="#">{{item.name}}
+            <li class="navigation__item _many" *ng-for="#item of menu"><a href="#"><span class="navigation__image {{item.sprite}}"></span>{{item.name}}
                 <div class="navigation__group _inside">
                     <a href="#" class="navigation__item" *ng-for="#i of item.elem">{{i.name}}</a>
                 </div>
@@ -11,15 +11,16 @@
           </ul>
         
       </section>
-      <section class="navigation__section">
+      <section class="navigation__section _account">
        <h3 class="navigation__section-title">Account</h3>
          <ul class="navigation__group">
           
-            <li class="navigation__item _many" *ng-for="#item of accounts"><a href="#">{{item.name}}
+            <li class="navigation__item _many" *ng-for="#item of accounts"><a href="#" (click)="toogleItems(item)">
+            <span class="navigation__image {{item.sprite}}"></span>{{item.name}}
               <span *ng-if="item.badge" class="navigation__badge">{{item.badge}}</span>
-              <span *ng-if="!!item.elem.length" class="navigation__arrow"></span>
+              <span *ng-if="!!item.elem.length && !item.state" class="navigation__arrow"></span>
             </a>
-                <div class="navigation__group _inside">
+                <div class="navigation__group _inside" [hidden]="!item.state">
                     <a href="#" class="navigation__item" *ng-for="#i of item.elem">{{i.name}}</a>
                 </div>
             </li>

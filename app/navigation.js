@@ -14,22 +14,22 @@ var angular2_2 = require('angular2/angular2');
 var NavigationComponent = (function () {
     function NavigationComponent() {
         this.menu = [
-            { name: 'Dashboard', elem: [] },
-            { name: 'Rankings', elem: [] },
-            { name: 'Analytics', elem: [] },
-            { name: 'Apps', elem: [] },
-            { name: 'Guides', elem: [] },
-            { name: 'Training', elem: [] },
+            { name: 'Dashboard', elem: [], sprite: 'sprite-dashboard' },
+            { name: 'Rankings', elem: [], sprite: 'sprite-rankings' },
+            { name: 'Analytics', elem: [], sprite: 'sprite-analitycs' },
+            { name: 'Apps', elem: [], sprite: 'sprite-apps' },
+            { name: 'Guides', elem: [], sprite: 'sprite-guides' },
+            { name: 'Training', elem: [], sprite: 'sprite-training' },
         ];
         this.accounts = [
-            { name: 'Support', elem: [] },
-            { name: 'Messages', elem: [], badge: 4 },
-            { name: 'Settings', elem: [{ name: 'Personal Information' }, { name: 'Password' }, { name: 'Contact' }] },
-            { name: 'Logout', elem: [] }
+            { name: 'Support', elem: [], sprite: 'sprite-support', state: 0 },
+            { name: 'Messages', elem: [], badge: 4, sprite: 'sprite-messages', state: 0 },
+            { name: 'Settings', sprite: 'sprite-settings', state: 0, elem: [{ name: 'Personal Information' }, { name: 'Password' }, { name: 'Contact' }] },
+            { name: 'Logout', elem: [], state: 0, sprite: 'sprite-logout' }
         ];
     }
-    NavigationComponent.prototype.onSubmit = function () {
-        alert('tak');
+    NavigationComponent.prototype.toogleItems = function (el) {
+        el.state = !el.state;
     };
     NavigationComponent = __decorate([
         angular2_1.Component({
