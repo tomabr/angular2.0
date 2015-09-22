@@ -39,18 +39,14 @@ export class NavigationComponent {
 		  el.state = !el.state;
   }
   active(el) {
-      if (el == 1) {
-        return '_active';
-      } else {
-        return '';
-      }
+      el = parseInt(el,10);
+      return (el === 1) ? '_active' :  '';
+      
   }
   tiggerPanel(el) {
-    if (el == 1) {
-        return 'navigation _show';
-      } else {
-        return 'navigation _hide';
-      }
+     el = parseInt(el,10);
+    return (el === 1) ? 'navigation _show' : 'navigation _hide';
+      
   }
   changePanel(el) {
       this.slide = el;

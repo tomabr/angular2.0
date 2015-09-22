@@ -33,20 +33,12 @@ var NavigationComponent = (function () {
         el.state = !el.state;
     };
     NavigationComponent.prototype.active = function (el) {
-        if (el == 1) {
-            return '_active';
-        }
-        else {
-            return '';
-        }
+        el = parseInt(el, 10);
+        return (el === 1) ? '_active' : '';
     };
     NavigationComponent.prototype.tiggerPanel = function (el) {
-        if (el == 1) {
-            return 'navigation _show';
-        }
-        else {
-            return 'navigation _hide';
-        }
+        el = parseInt(el, 10);
+        return (el === 1) ? 'navigation _show' : 'navigation _hide';
     };
     NavigationComponent.prototype.changePanel = function (el) {
         this.slide = el;
