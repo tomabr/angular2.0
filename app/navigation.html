@@ -1,4 +1,4 @@
-    <nav>
+    <nav class="navigation" (click)="changePanel(!slide)" [class]="tiggerPanel(slide)">
       <h2 class="navigation__logo"><img src="images/logo.png" alt="BentPixels"></h2>
       <section class="navigation__section">
         <h3 class="navigation__section-title">Main</h3>
@@ -16,7 +16,7 @@
          <ul class="navigation__group">
           
             <li class="navigation__item _many" *ng-for="#item of accounts"><a href="#" (click)="toogleItems(item)" [class]="active(item.state)">
-            <span class="navigation__image {{item.sprite}}"></span>{{item.name}}
+            <span class="navigation__image {{item.sprite}}"></span><span>{{item.name}}
               <span *ng-if="item.badge" class="navigation__badge">{{item.badge}}</span>
               <span *ng-if="!!item.elem.length && !item.state" class="navigation__arrow"></span>
             </a>

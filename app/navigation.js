@@ -13,6 +13,7 @@ var angular2_1 = require('angular2/angular2');
 var angular2_2 = require('angular2/angular2');
 var NavigationComponent = (function () {
     function NavigationComponent() {
+        this.slide = 1;
         this.menu = [
             { name: 'Dashboard', elem: [], sprite: 'sprite-dashboard' },
             { name: 'Rankings', elem: [], sprite: 'sprite-rankings' },
@@ -38,6 +39,17 @@ var NavigationComponent = (function () {
         else {
             return '';
         }
+    };
+    NavigationComponent.prototype.tiggerPanel = function (el) {
+        if (el == 1) {
+            return 'navigation _show';
+        }
+        else {
+            return 'navigation _hide';
+        }
+    };
+    NavigationComponent.prototype.changePanel = function (el) {
+        this.slide = el;
     };
     NavigationComponent = __decorate([
         angular2_1.Component({

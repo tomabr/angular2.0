@@ -18,9 +18,6 @@ var CarouselComponent = (function () {
             { src: 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: '' },
             { src: 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: '' }];
     }
-    CarouselComponent.prototype.onSubmit = function () {
-        alert('tak');
-    };
     CarouselComponent = __decorate([
         angular2_1.Component({
             selector: 'carousel',

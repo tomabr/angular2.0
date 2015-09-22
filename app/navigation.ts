@@ -16,7 +16,10 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control} from 'a
 export class NavigationComponent {
   menu: Array<Object>;
   support: Array<Object>;
+  slide:boolean;
   constructor( ) {
+
+    this.slide=1;
 
     this.menu = [
     {name : 'Dashboard', elem: [], sprite: 'sprite-dashboard'},
@@ -44,6 +47,17 @@ export class NavigationComponent {
       else{
        return '';
       }
+  }
+  tiggerPanel(el){
+    if(el==1){
+       return 'navigation _show';
+      }
+      else{
+       return 'navigation _hide';
+      }
+  }
+  changePanel(el){
+      this.slide = el;
   }
 }
 bootstrap(NavigationComponent);

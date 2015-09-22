@@ -21,8 +21,5 @@ export class CarouselComponent {
     {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''},
     {src : 'http://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg', alt: '', class: ''}];
   }
-  onSubmit() {
-		  alert('tak');
-  }
 }
 bootstrap(CarouselComponent);
