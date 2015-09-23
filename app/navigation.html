@@ -1,5 +1,5 @@
     <nav class="navigation" (click)="changePanel(!slide)" [class]="tiggerPanel(slide)">
-      <h2 class="navigation__logo"><img src="images/logo.png" alt="BentPixels"></h2>
+      <h2 class="navigation__logo"><img src="images/logo.png" alt="BentPixels" (click)="changePanel(!slide)"><span class="navigation__text">Bent Pixels</span></h2>
       <section class="navigation__section">
         <h3 class="navigation__section-title">Main</h3>
         <ul class="navigation__group">
