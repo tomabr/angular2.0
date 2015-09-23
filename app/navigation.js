@@ -38,8 +38,11 @@ var NavigationComponent = (function () {
     NavigationComponent.prototype.tiggerPanel = function (el) {
         return (!!el) ? 'navigation _show' : 'navigation _hide';
     };
-    NavigationComponent.prototype.changePanel = function (el) {
-        this.slide = el;
+    NavigationComponent.prototype.showPanel = function (el) {
+        this.slide = true;
+    };
+    NavigationComponent.prototype.hidePanel = function (el) {
+        this.slide = false;
     };
     NavigationComponent = __decorate([
         angular2_1.Component({

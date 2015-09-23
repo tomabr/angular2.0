@@ -18,6 +18,7 @@ export class SearchComponent {
     });
   }
   onSubmit() {
+    ;
   }
 }
 bootstrap(SearchComponent);

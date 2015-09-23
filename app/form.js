@@ -64,10 +64,11 @@ var AppComponent = (function () {
         return true;
     };
     AppComponent.prototype.onSubmit = function () {
+        ;
     };
     AppComponent = __decorate([
         angular2_1.Component({
-            selector: 'app',
+            selector: '.form',
             viewBindings: [angular2_2.FormBuilder]
         }),
         angular2_1.View({
@@ -81,4 +82,4 @@ var AppComponent = (function () {
 exports.AppComponent = AppComponent;
 angular2_1.bootstrap(AppComponent);
 
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=form.js.map

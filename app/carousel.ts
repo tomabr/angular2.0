@@ -4,7 +4,7 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control} from 'a
 
 
 @Component({
-  selector: 'carousel',
+  selector: '.carousel',
   viewBindings: [FormBuilder]
 })
 @View({

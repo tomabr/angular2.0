@@ -45,8 +45,11 @@ export class NavigationComponent {
   tiggerPanel(el) {
      return (!!el) ? 'navigation _show' : 'navigation _hide';
   }
-  changePanel(el) {
-      this.slide = el;
+  showPanel(el) {
+      this.slide = true;
+  }
+  hidePanel(el) {
+      this.slide = false;
   }
 }
 bootstrap(NavigationComponent);

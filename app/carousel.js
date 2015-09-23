@@ -20,7 +20,7 @@ var CarouselComponent = (function () {
     }
     CarouselComponent = __decorate([
         angular2_1.Component({
-            selector: 'carousel',
+            selector: '.carousel',
             viewBindings: [angular2_2.FormBuilder]
         }),
         angular2_1.View({

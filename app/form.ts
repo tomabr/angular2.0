@@ -18,7 +18,7 @@ function emailValidator(control) {
 
 
 @Component({
-  selector: 'app',
+  selector: '.form',
   viewBindings: [FormBuilder]
 })
 @View({
@@ -70,6 +70,7 @@ export class AppComponent {
     return true;
   }
 	onSubmit() {
+    ;
 	}
 }
 bootstrap(AppComponent);

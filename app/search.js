@@ -18,6 +18,7 @@ var SearchComponent = (function () {
         });
     }
     SearchComponent.prototype.onSubmit = function () {
+        ;
     };
     SearchComponent = __decorate([
         angular2_1.Component({

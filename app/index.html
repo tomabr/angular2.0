@@ -24,7 +24,8 @@
   <body>
     <navigation></navigation>
     <header class="header">
-       <search></search>
+       <form [ng-form-model]="search" (submit)="onSubmit()" class="search">
+       </form>
     </header>
 
     <main class="main">
@@ -35,12 +36,13 @@
             <div class="main__center">
           Please read the contract and fill in the form to accept. Make sure you understand it and follow the instructions after accepting, to complete the partnership process.
             </div>
-            <carousel></carousel>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            </div>
           </div>
         </div>
       </div>
       
-      <app></app>
+      <div class="form"></div>
     </main>
 
 
@@ -49,7 +51,7 @@
       System.import('navigation');
       System.import('search');
       System.import('carousel');
-      System.import('app');
+      System.import('form');
     </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<form [ng-form-model]="form" (submit)="onSubmit()" class="form">
+<form [ng-form-model]="form" (submit)="onSubmit()">
     <div class="form__content">
         <div class="form__item" [class.has-error]="!form.controls.fullName.valid && form.controls.fullName.touched">
             <label class="form__label" for="fullName">Full Name</label>
