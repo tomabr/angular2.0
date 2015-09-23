@@ -37,7 +37,7 @@ var AppComponent = (function () {
             zip: ['', angular2_2.Validators.required],
             country: ['', angular2_2.Validators.required],
             18: [true],
-            copy: [false],
+            copy: [false]
         });
         this.parent = pb.group({
             name: ['', angular2_2.Validators.required],
@@ -55,11 +55,12 @@ var AppComponent = (function () {
         this.formButton = value;
     };
     AppComponent.prototype.checkButton = function (f, p, a) {
-        console.log(f, p, a);
-        if (!!a && !!f)
+        if (!!a && !!f) {
             return false;
-        if (!a && !!f && !!p)
+        }
+        if (!a && !!f && !!p) {
             return false;
+        }
         return true;
     };
     AppComponent.prototype.onSubmit = function () {

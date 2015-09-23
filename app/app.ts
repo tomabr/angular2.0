@@ -43,7 +43,7 @@ export class AppComponent {
       zip: ['', Validators.required],
       country: ['', Validators.required ],
       18: [true],
-      copy: [false],
+      copy: [false]
       });
       this.parent = pb.group({
             name: ['', Validators.required],
@@ -51,24 +51,22 @@ export class AppComponent {
             address1: ['', Validators.required],
             address2: ['', Validators.required],
             city: ['', Validators.required],
-            state: ['',Validators.required],
-            zip: ['',Validators.required],
-            country: ['',Validators.required],
+            state: ['', Validators.required],
+            zip: ['', Validators.required],
+            country: ['', Validators.required],
             telephone: ['', Validators.compose([ Validators.required, telValidator])]
-        })
+        });
   }
   changeState(value) {
        this.formButton = value;
   }
-  checkButton(f,p,a){
-    console.log(f,p,a);
-    if(!!a && !!f)
+  checkButton (f, p, a) {
+    if ( !!a && !!f ) {
       return false;
-    
-    if(!a && !!f && !!p)
+    }
+    if ( !a && !!f && !!p ) {
       return false;
-    
-
+    }
     return true;
   }
 	onSubmit() {
