@@ -7473,23 +7473,24 @@ button.list-group-item-danger.active:focus {
     display: none !important;
   }
 }
-/* line 67, ../../assets/stylesheets/app.scss */
+/* line 68, ../../assets/stylesheets/app.scss */
 .input-height, .search .search__button, .search .search__input, .form .form__label, .form .form__label._two-line, .form .form__input {
   height: 40px;
   line-height: 40px;
 }
 
-/* line 76, ../../assets/stylesheets/app.scss */
+/* line 77, ../../assets/stylesheets/app.scss */
 .main {
   background: #ececec;
   padding-top: 35px;
+  padding-bottom: 30px;
 }
-/* line 84, ../../assets/stylesheets/app.scss */
+/* line 86, ../../assets/stylesheets/app.scss */
 .main .main__inside {
   background: #3ca1d0;
   padding-top: 40px;
 }
-/* line 94, ../../assets/stylesheets/app.scss */
+/* line 96, ../../assets/stylesheets/app.scss */
 .main .main__center {
   position: relative;
   float: left;
@@ -7508,24 +7509,24 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 40px;
 }
 @media (min-width: 992px) {
-  /* line 94, ../../assets/stylesheets/app.scss */
+  /* line 96, ../../assets/stylesheets/app.scss */
   .main .main__center {
     margin-left: 25%;
   }
 }
 @media (min-width: 992px) {
-  /* line 94, ../../assets/stylesheets/app.scss */
+  /* line 96, ../../assets/stylesheets/app.scss */
   .main .main__center {
     float: left;
     width: 50%;
   }
 }
 
-/* line 107, ../../assets/stylesheets/app.scss */
+/* line 109, ../../assets/stylesheets/app.scss */
 .search {
-  margin-top: 20px;
+  margin: 20px 0;
 }
-/* line 111, ../../assets/stylesheets/app.scss */
+/* line 113, ../../assets/stylesheets/app.scss */
 .search .search__content {
   position: relative;
   float: left;
@@ -7539,13 +7540,13 @@ button.list-group-item-danger.active:focus {
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  /* line 111, ../../assets/stylesheets/app.scss */
+  /* line 113, ../../assets/stylesheets/app.scss */
   .search .search__content {
     float: left;
     width: 33.33333%;
   }
 }
-/* line 121, ../../assets/stylesheets/app.scss */
+/* line 123, ../../assets/stylesheets/app.scss */
 .search .search__button {
   position: relative;
   float: left;
@@ -7558,29 +7559,30 @@ button.list-group-item-danger.active:focus {
   padding-left: 15px;
   padding-right: 15px;
   line-height: inherit;
+  text-transform: uppercase;
 }
 @media (min-width: 992px) {
-  /* line 121, ../../assets/stylesheets/app.scss */
+  /* line 123, ../../assets/stylesheets/app.scss */
   .search .search__button {
     margin-left: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 121, ../../assets/stylesheets/app.scss */
+  /* line 123, ../../assets/stylesheets/app.scss */
   .search .search__button {
     float: left;
     width: 16.66667%;
   }
 }
-/* line 132, ../../assets/stylesheets/app.scss */
+/* line 135, ../../assets/stylesheets/app.scss */
 .search .search__input {
   border-left-color: transparent;
 }
-/* line 138, ../../assets/stylesheets/app.scss */
+/* line 141, ../../assets/stylesheets/app.scss */
 .search .search__adon {
   border-radius: 20px;
 }
-/* line 148, ../../assets/stylesheets/app.scss */
+/* line 151, ../../assets/stylesheets/app.scss */
 .search .search__submit {
   background: transparent;
   border: none;
@@ -7588,12 +7590,14 @@ button.list-group-item-danger.active:focus {
   height: 100%;
 }
 
-/* line 159, ../../assets/stylesheets/app.scss */
+/* line 162, ../../assets/stylesheets/app.scss */
 .form {
   background: #fff;
   padding-top: 110px;
+  padding-bottom: 65px;
+  border: 2px solid #dadada;
 }
-/* line 170, ../../assets/stylesheets/app.scss */
+/* line 175, ../../assets/stylesheets/app.scss */
 .form .form__item {
   position: relative;
   float: left;
@@ -7607,19 +7611,19 @@ button.list-group-item-danger.active:focus {
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  /* line 170, ../../assets/stylesheets/app.scss */
+  /* line 175, ../../assets/stylesheets/app.scss */
   .form .form__item {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 170, ../../assets/stylesheets/app.scss */
+  /* line 175, ../../assets/stylesheets/app.scss */
   .form .form__item {
     margin-left: 8.33333%;
   }
 }
-/* line 176, ../../assets/stylesheets/app.scss */
+/* line 181, ../../assets/stylesheets/app.scss */
 .form .form__item._full {
   position: relative;
   min-height: 1px;
@@ -7627,36 +7631,36 @@ button.list-group-item-danger.active:focus {
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  /* line 176, ../../assets/stylesheets/app.scss */
+  /* line 181, ../../assets/stylesheets/app.scss */
   .form .form__item._full {
     float: left;
     width: 75%;
   }
 }
 @media (min-width: 992px) {
-  /* line 176, ../../assets/stylesheets/app.scss */
+  /* line 181, ../../assets/stylesheets/app.scss */
   .form .form__item._full {
     margin-left: 8.33333%;
   }
 }
-/* line 183, ../../assets/stylesheets/app.scss */
+/* line 188, ../../assets/stylesheets/app.scss */
 .form .form__label {
   width: 30%;
 }
-/* line 187, ../../assets/stylesheets/app.scss */
+/* line 192, ../../assets/stylesheets/app.scss */
 .form .form__label._two-line {
   line-height: 20px;
 }
-/* line 193, ../../assets/stylesheets/app.scss */
+/* line 198, ../../assets/stylesheets/app.scss */
 .form .form__input {
   display: block;
   width: 70%;
 }
-/* line 200, ../../assets/stylesheets/app.scss */
+/* line 205, ../../assets/stylesheets/app.scss */
 .form .form__input[placeholder] {
   font-family: 'ProximaNovaCond-RegularIt';
 }
-/* line 206, ../../assets/stylesheets/app.scss */
+/* line 211, ../../assets/stylesheets/app.scss */
 .form .form__tip {
   width: 65%;
   margin-left: 35%;
@@ -7665,7 +7669,7 @@ button.list-group-item-danger.active:focus {
   font-family: 'ProximaNova-Semibold';
 }
 
-/* line 224, ../../assets/stylesheets/app.scss */
+/* line 229, ../../assets/stylesheets/app.scss */
 .carousel {
   position: relative;
   float: left;
@@ -7681,48 +7685,52 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 100px;
 }
 @media (min-width: 992px) {
-  /* line 224, ../../assets/stylesheets/app.scss */
+  /* line 229, ../../assets/stylesheets/app.scss */
   .carousel {
     margin-left: 33.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 224, ../../assets/stylesheets/app.scss */
+  /* line 229, ../../assets/stylesheets/app.scss */
   .carousel {
     float: left;
     width: 33.33333%;
   }
 }
-/* line 236, ../../assets/stylesheets/app.scss */
+/* line 241, ../../assets/stylesheets/app.scss */
 .carousel .carousel__item {
   border-radius: 5px;
 }
-/* line 241, ../../assets/stylesheets/app.scss */
+/* line 246, ../../assets/stylesheets/app.scss */
 .carousel .carousel-indicators {
   bottom: 40px;
 }
-/* line 244, ../../assets/stylesheets/app.scss */
+/* line 249, ../../assets/stylesheets/app.scss */
 .carousel .carousel-indicators .carousel-indicators-item {
   background: #fff;
 }
-/* line 247, ../../assets/stylesheets/app.scss */
+/* line 252, ../../assets/stylesheets/app.scss */
 .carousel .carousel-indicators .carousel-indicators-item.active {
   background: #1f2026;
 }
-/* line 256, ../../assets/stylesheets/app.scss */
+/* line 261, ../../assets/stylesheets/app.scss */
 .carousel .carousel__control._left {
   background: none;
   left: -40px;
   top: -100px;
 }
-/* line 263, ../../assets/stylesheets/app.scss */
+/* line 268, ../../assets/stylesheets/app.scss */
 .carousel .carousel__control._right {
   background: none;
   right: -40px;
   top: -100px;
 }
+/* line 276, ../../assets/stylesheets/app.scss */
+.carousel .carousel__arrow {
+  font-size: 20px;
+}
 
-/* line 285, ../../assets/stylesheets/app.scss */
+/* line 291, ../../assets/stylesheets/app.scss */
 .navigation {
   width: 200px;
   background: #363946;
@@ -7737,13 +7745,13 @@ button.list-group-item-danger.active:focus {
   /* Chrome, Safari, Opera */
   /* Standard syntax */
 }
-/* line 297, ../../assets/stylesheets/app.scss */
+/* line 303, ../../assets/stylesheets/app.scss */
 .navigation._show {
   left: 0;
   -webkit-animation: 0.5s slide-down;
   animation: 0.5s slide-down;
 }
-/* line 303, ../../assets/stylesheets/app.scss */
+/* line 309, ../../assets/stylesheets/app.scss */
 .navigation._hide {
   left: -190px;
   -webkit-animation: 0.5s slide-up;
@@ -7781,7 +7789,7 @@ button.list-group-item-danger.active:focus {
     left: 0;
   }
 }
-/* line 338, ../../assets/stylesheets/app.scss */
+/* line 344, ../../assets/stylesheets/app.scss */
 .navigation .navigation__section-title {
   color: #1f2026;
   font-size: inherit;
@@ -7789,15 +7797,15 @@ button.list-group-item-danger.active:focus {
   padding-left: 15px;
   text-transform: uppercase;
 }
-/* line 347, ../../assets/stylesheets/app.scss */
+/* line 353, ../../assets/stylesheets/app.scss */
 .navigation .navigation__section {
   width: 100%;
 }
-/* line 351, ../../assets/stylesheets/app.scss */
+/* line 357, ../../assets/stylesheets/app.scss */
 .navigation .navigation__logo {
   text-align: center;
 }
-/* line 355, ../../assets/stylesheets/app.scss */
+/* line 361, ../../assets/stylesheets/app.scss */
 .navigation .navigation__badge {
   text-align: right;
   float: right;
@@ -7805,33 +7813,33 @@ button.list-group-item-danger.active:focus {
   color: #fff;
   background: #e65660;
 }
-/* line 364, ../../assets/stylesheets/app.scss */
+/* line 370, ../../assets/stylesheets/app.scss */
 .navigation .navigation__arrow {
   float: right;
   border-radius: 50px;
   color: #666a7f;
   margin-right: 4px;
 }
-/* line 373, ../../assets/stylesheets/app.scss */
+/* line 379, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group {
   border-radius: 0;
 }
-/* line 377, ../../assets/stylesheets/app.scss */
+/* line 383, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside {
   margin-bottom: 0;
 }
-/* line 379, ../../assets/stylesheets/app.scss */
+/* line 385, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside .navigation__item {
   padding-left: 15px;
   text-transform: none;
   background: #272a36;
   border-bottom: 2px solid #363946;
 }
-/* line 386, ../../assets/stylesheets/app.scss */
+/* line 392, ../../assets/stylesheets/app.scss */
 .navigation .navigation__group._inside .navigation__item:hover, .navigation .navigation__group._inside .navigation__item:focus {
   background: #272a36;
 }
-/* line 393, ../../assets/stylesheets/app.scss */
+/* line 399, ../../assets/stylesheets/app.scss */
 .navigation .navigation__image {
   height: 17px;
   width: 25px;
@@ -7839,7 +7847,7 @@ button.list-group-item-danger.active:focus {
   overflow: auto;
   margin-right: 10px;
 }
-/* line 402, ../../assets/stylesheets/app.scss */
+/* line 408, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item {
   line-height: 17px;
   background: #363946;
@@ -7889,7 +7897,7 @@ button.list-group-item-danger.active:focus {
 .navigation .navigation__item .sprite-training {
   background-position: 0 -165px;
 }
-/* line 416, ../../assets/stylesheets/app.scss */
+/* line 422, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item > a {
   color: inherit !important;
   display: inline-block;
@@ -7897,24 +7905,24 @@ button.list-group-item-danger.active:focus {
   width: 100%;
   padding: 5px 15px;
 }
-/* line 423, ../../assets/stylesheets/app.scss */
+/* line 429, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item > a._active {
   background: #272a36;
   border-bottom: 2px solid #363946;
 }
-/* line 429, ../../assets/stylesheets/app.scss */
+/* line 435, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item._many {
   padding-bottom: 0;
 }
-/* line 431, ../../assets/stylesheets/app.scss */
+/* line 437, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item._many > a {
   padding-bottom: 8px;
 }
-/* line 437, ../../assets/stylesheets/app.scss */
+/* line 443, ../../assets/stylesheets/app.scss */
 .navigation .navigation__item:hover, .navigation .navigation__item:focus {
   background: inherit;
 }
-/* line 442, ../../assets/stylesheets/app.scss */
+/* line 448, ../../assets/stylesheets/app.scss */
 .navigation ._account {
   margin-top: 165px;
 }
