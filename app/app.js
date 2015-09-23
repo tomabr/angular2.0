@@ -17,8 +17,14 @@ function telValidator(control) {
     }
 }
 ;
+function emailValidator(control) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    if (!control.value.match(re)) {
+        return { invalideEmail: true };
+    }
+}
 var AppComponent = (function () {
-    function AppComponent(fb) {
+    function AppComponent(fb, pb) {
         this.countryGroup = ['Poland', 'USA'];
         this.formButton = false;
         this.form = fb.group({
@@ -30,23 +36,31 @@ var AppComponent = (function () {
             state: ['', angular2_2.Validators.required],
             zip: ['', angular2_2.Validators.required],
             country: ['', angular2_2.Validators.required],
-            18: [1],
-            copy: [0],
-            parent: fb.group({
-                name: [''],
-                email: [''],
-                address1: [''],
-                address2: [''],
-                city: [''],
-                state: [''],
-                zip: [''],
-                country: [''],
-                telephone: ['']
-            })
+            18: [true],
+            copy: [false],
+        });
+        this.parent = pb.group({
+            name: ['', angular2_2.Validators.required],
+            email: ['', angular2_2.Validators.compose([angular2_2.Validators.required, emailValidator])],
+            address1: ['', angular2_2.Validators.required],
+            address2: ['', angular2_2.Validators.required],
+            city: ['', angular2_2.Validators.required],
+            state: ['', angular2_2.Validators.required],
+            zip: ['', angular2_2.Validators.required],
+            country: ['', angular2_2.Validators.required],
+            telephone: ['', angular2_2.Validators.compose([angular2_2.Validators.required, telValidator])]
         });
     }
     AppComponent.prototype.changeState = function (value) {
         this.formButton = value;
+    };
+    AppComponent.prototype.checkButton = function (f, p, a) {
+        console.log(f, p, a);
+        if (!!a && !!f)
+            return false;
+        if (!a && !!f && !!p)
+            return false;
+        return true;
     };
     AppComponent.prototype.onSubmit = function () {
         ;
@@ -60,7 +74,7 @@ var AppComponent = (function () {
             templateUrl: 'form.html',
             directives: [angular2_2.FORM_DIRECTIVES, angular2_1.NgFor, angular2_1.NgIf]
         }), 
-        __metadata('design:paramtypes', [angular2_2.FormBuilder])
+        __metadata('design:paramtypes', [angular2_2.FormBuilder, angular2_2.FormBuilder])
     ], AppComponent);
     return AppComponent;
 })();

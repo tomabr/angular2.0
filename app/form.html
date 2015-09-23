@@ -57,96 +57,96 @@
     </div>
     <div class="form__content">
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-        !form.controls.parent.controls.name.valid && form.controls.parent.controls.name.touched">
+        !parent.controls.name.valid && parent.controls.name.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label _two-line" for="parent.name">Name parent or guardian</label>
-                <input id="parent.name" class="form__input" [ng-form-control]="form.controls.parent.controls.name" placeholder="nameParent" [disabled]="form.controls['18'].value" value="{{form.controls.fullName.value}}">
-                <span>Please insert full legal name</span>
+                <input id="parent.name" class="form__input" [ng-form-control]="parent.controls.name" placeholder="nameParent" [disabled]="form.controls['18'].value" value="{{form.controls.fullName.value}}">
+                <div class="form__tip">Please insert full legal name</div>
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label _two-line" for="parent.name">Name parent or guardian</label>
-                <input id="parent.name" class="form__input" [ng-form-control]="form.controls.parent.controls.name" placeholder="nameParent" [disabled]="form.controls['18'].value">
+                <input id="parent.name" class="form__input" [ng-form-control]="parent.controls.name" placeholder="nameParent" [disabled]="form.controls['18'].value">
                 <div class="form__tip">Please insert full legal name</div>
             </div>
         </div>
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-        !form.controls.parent.controls.email.valid && form.controls.parent.controls.email.touched && form.controls.parent.controls.email.hasError('invalideEmail')">
+        !parent.controls.email.valid && parent.controls.email.touched && parent.controls.email.hasError('invalideEmail')">
             <label class="form__label" for="parent.email">Email</label>
-            <input id="parent.email" type="email" class="form__input" [ng-form-control]="form.controls.parent.controls.email" placeholder="email" [disabled]="form.controls['18'].value">
+            <input id="parent.email" type="email" class="form__input" [ng-form-control]="parent.controls.email" placeholder="email" [disabled]="form.controls['18'].value">
         </div>
     </div>
     <div class="form__content">
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.address1.valid && form.controls.parent.controls.address1.touched">
+    !parent.controls.address1.valid && parent.controls.address1.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.address1">Address 1</label>
-                <input id="parent.address1" class="form__input" [ng-form-control]="form.controls.parent.controls.address1" placeholder="Address1" [disabled]="form.controls['18'].value" value="{{form.controls.address1.value}}">
+                <input id="parent.address1" class="form__input" [ng-form-control]="parent.controls.address1" placeholder="Address1" [disabled]="form.controls['18'].value" value="{{form.controls.address1.value}}">
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.address1">Address 1</label>
-                <input id="parent.address1" class="form__input" [ng-form-control]="form.controls.parent.controls.address1" placeholder="Address1" [disabled]="form.controls['18'].value">
+                <input id="parent.address1" class="form__input" [ng-form-control]="parent.controls.address1" placeholder="Address1" [disabled]="form.controls['18'].value">
             </div>
         </div>
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.address2.valid && form.controls.parent.controls.address2.touched">
+    !parent.controls.address2.valid && parent.controls.address2.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.address2">Address 2</label>
-                <input id="parent.address2" class="form__input" [ng-form-control]="form.controls.parent.controls.address2" placeholder="Address2" [disabled]="form.controls['18'].value" value="{{form.controls.address2.value}}">
+                <input id="parent.address2" class="form__input" [ng-form-control]="parent.controls.address2" placeholder="Address2" [disabled]="form.controls['18'].value" value="{{form.controls.address2.value}}">
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.address2">Address 2</label>
-                <input id="parent.address2" class="form__input" [ng-form-control]="form.controls.parent.controls.address2" placeholder="Address2" [disabled]="form.controls['18'].value">
+                <input id="parent.address2" class="form__input" [ng-form-control]="parent.controls.address2" placeholder="Address2" [disabled]="form.controls['18'].value">
             </div>
         </div>
     </div>
     <div class="form__content">
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.city.valid && form.controls.parent.controls.city.touched">
+    !parent.controls.city.valid && parent.controls.city.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.city">City</label>
-                <input id="parent.city" class="form__input" [ng-form-control]="form.controls.parent.controls.city" placeholder="City" [disabled]="form.controls['18'].value" value="{{form.controls.city.value}}">
+                <input id="parent.city" class="form__input" [ng-form-control]="parent.controls.city" placeholder="City" [disabled]="form.controls['18'].value" value="{{form.controls.city.value}}">
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.city">City</label>
-                <input id="parent.city" class="form__input" [ng-form-control]="form.controls.parent.controls.city" placeholder="City" [disabled]="form.controls['18'].value">
+                <input id="parent.city" class="form__input" [ng-form-control]="parent.controls.city" placeholder="City" [disabled]="form.controls['18'].value">
             </div>
         </div>
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.state.valid && form.controls.parent.controls.state.touched">
+    !parent.controls.state.valid && parent.controls.state.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.state">State</label>
-                <input id="parent.state" class="form__input" [ng-form-control]="form.controls.parent.controls.state" placeholder="State" [disabled]="form.controls['18'].value" value="{{form.controls.state.value}}">
+                <input id="parent.state" class="form__input" [ng-form-control]="parent.controls.state" placeholder="State" [disabled]="form.controls['18'].value" value="{{form.controls.state.value}}">
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.state">State</label>
-                <input id="parent.state" class="form__input" [ng-form-control]="form.controls.parent.controls.state" placeholder="State" [disabled]="form.controls['18'].value">
+                <input id="parent.state" class="form__input" [ng-form-control]="parent.controls.state" placeholder="State" [disabled]="form.controls['18'].value">
             </div>
         </div>
     </div>
     <div class="form__content">
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.zip.valid && form.controls.parent.controls.zip.touched">
+    !parent.controls.zip.valid && parent.controls.zip.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.zip">Zip or postcode</label>
-                <input id="parent.zip" class="form__input" [ng-form-control]="form.controls.parent.controls.zip" placeholder="State" [disabled]="form.controls['18'].value" value="{{form.controls.zip.value}}">
+                <input id="parent.zip" class="form__input" [ng-form-control]="parent.controls.zip" placeholder="State" [disabled]="form.controls['18'].value" value="{{form.controls.zip.value}}">
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.zip">Zip or postcode</label>
-                <input id="parent.zip" class="form__input" [ng-form-control]="form.controls.parent.controls.zip" placeholder="State" [disabled]="form.controls['18'].value">
+                <input id="parent.zip" class="form__input" [ng-form-control]="parent.controls.zip" placeholder="State" [disabled]="form.controls['18'].value">
             </div>
         </div>
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.country.valid && form.controls.parent.controls.country.touched">
+    !parent.controls.country.valid && parent.controls.country.touched">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.country">Country</label>
-                <select id="parent.coutnry" class="form__input" [ng-form-control]="form.controls.parent.controls.country" placeholder="country" [disabled]="form.controls['18'].value">
+                <select id="parent.coutnry" class="form__input" [ng-form-control]="parent.controls.country" placeholder="country" [disabled]="form.controls['18'].value">
                     <option value="">--Please select--</option>
                     <option value="{{form.controls.country.value}}">{{form.controls.country.value}}</option>
                 </select>
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.country">Country</label>
-                <select id="parent.country" class="form__input" [ng-form-control]="form.controls.parent.controls.country" placeholder="country" [disabled]="form.controls['18'].value">
+                <select id="parent.country" class="form__input" [ng-form-control]="parent.controls.country" placeholder="country" [disabled]="form.controls['18'].value">
                     <option value="">--Please select--</option>
                     <option *ng-for="#country of countryGroup" value="{{country}}">{{country}}</option>
                 </select>
@@ -155,20 +155,20 @@
     </div>
     <div class="form__content">
         <div class="form__item" [class.has-error]="!form.controls['18'].value &&
-    !form.controls.parent.controls.telephone.valid && form.controls.parent.controls.telephone.touched && form.controls.parent.controls.telephone.hasError('invalideTelephone')">
+    !parent.controls.telephone.valid && parent.controls.telephone.touched && parent.controls.telephone.hasError('invalideTelephone')">
             <div [hidden]="!form.controls.copy.value">
                 <label class="form__label" for="parent.telephone">Telephone</label>
-                <input id="parent.telephone" class="form__input" [ng-form-control]="form.controls.parent.controls.telephone" placeholder="Telephone" [disabled]="form.controls['18'].value" value="{{form.controls.telephone.value}}">
+                <input id="parent.telephone" class="form__input" [ng-form-control]="parent.controls.telephone" placeholder="Telephone" [disabled]="form.controls['18'].value" value="{{form.controls.telephone.value}}">
             </div>
             <div [hidden]="form.controls.copy.value">
                 <label class="form__label" for="parent.telephone">Telephone</label>
-                <input id="parent.telephone" class="form__input" [ng-form-control]="form.controls.parent.controls.telephone" placeholder="Telephone" [disabled]="form.controls['18'].value">
+                <input id="parent.telephone" class="form__input" [ng-form-control]="parent.controls.telephone" placeholder="Telephone" [disabled]="form.controls['18'].value">
             </div>
         </div>
     </div>
     <div class="form__content">
         <div class="form__item _full">
-            <button class="form__button" type="submit" [disabled]="!form.valid">I agree to Content</button>
+            <button class="form__button" type="submit" [disabled]="checkButton(form.valid, parent.valid, form.controls['18'].value)">I agree to Content</button>
         </div>
     </div>
 </form>

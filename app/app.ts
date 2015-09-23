@@ -9,6 +9,12 @@ function telValidator(control) {
   }
 };
 
+function emailValidator(control) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    if (!control.value.match(re)) {
+      return { invalideEmail: true };
+    }
+}
 
 
 @Component({
@@ -21,9 +27,10 @@ function telValidator(control) {
 })
 export class AppComponent {
   form: ControlGroup;
+  parent: ControlGroup;
   formButton:boolean;
   countryGroup: Array<string>;
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, pb: FormBuilder) {
       this.countryGroup = ['Poland', 'USA'];
       this.formButton = false;
       this.form = fb.group({
@@ -35,23 +42,34 @@ export class AppComponent {
       state: ['', Validators.required ],
       zip: ['', Validators.required],
       country: ['', Validators.required ],
-      18: [1],
-      copy: [0],
-      parent: fb.group({
-            name: [''],
-            email: [''],
-            address1: [''],
-            address2: [''],
-            city: [''],
-            state: [''],
-            zip: [''],
-            country: [''],
-            telephone: ['']
-	  		})
-    });
+      18: [true],
+      copy: [false],
+      });
+      this.parent = pb.group({
+            name: ['', Validators.required],
+            email: ['', Validators.compose([ Validators.required, emailValidator])],
+            address1: ['', Validators.required],
+            address2: ['', Validators.required],
+            city: ['', Validators.required],
+            state: ['',Validators.required],
+            zip: ['',Validators.required],
+            country: ['',Validators.required],
+            telephone: ['', Validators.compose([ Validators.required, telValidator])]
+        })
   }
   changeState(value) {
        this.formButton = value;
+  }
+  checkButton(f,p,a){
+    console.log(f,p,a);
+    if(!!a && !!f)
+      return false;
+    
+    if(!a && !!f && !!p)
+      return false;
+    
+
+    return true;
   }
 	onSubmit() {
 		  ;
