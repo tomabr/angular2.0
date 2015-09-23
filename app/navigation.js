@@ -47,7 +47,7 @@ var NavigationComponent = (function () {
             viewBindings: [angular2_2.FormBuilder]
         }),
         angular2_1.View({
-            templateUrl: 'navigation.html',
+            templateUrl: 'templates/navigation.html',
             directives: [angular2_2.FORM_DIRECTIVES, angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])

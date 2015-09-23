@@ -64,7 +64,6 @@ var AppComponent = (function () {
         return true;
     };
     AppComponent.prototype.onSubmit = function () {
-        ;
     };
     AppComponent = __decorate([
         angular2_1.Component({
@@ -72,7 +71,7 @@ var AppComponent = (function () {
             viewBindings: [angular2_2.FormBuilder]
         }),
         angular2_1.View({
-            templateUrl: 'form.html',
+            templateUrl: 'templates/form.html',
             directives: [angular2_2.FORM_DIRECTIVES, angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [angular2_2.FormBuilder, angular2_2.FormBuilder])

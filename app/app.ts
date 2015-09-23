@@ -22,7 +22,7 @@ function emailValidator(control) {
   viewBindings: [FormBuilder]
 })
 @View({
-  templateUrl: 'form.html',
+  templateUrl: 'templates/form.html',
   directives: [FORM_DIRECTIVES, NgFor, NgIf]
 })
 export class AppComponent {
@@ -70,7 +70,6 @@ export class AppComponent {
     return true;
   }
 	onSubmit() {
-		  ;
 	}
 }
 bootstrap(AppComponent);

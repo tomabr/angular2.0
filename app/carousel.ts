@@ -8,7 +8,7 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control} from 'a
   viewBindings: [FormBuilder]
 })
 @View({
-  templateUrl: 'carousel.html',
+  templateUrl: 'templates/carousel.html',
   directives: [FORM_DIRECTIVES, NgFor, NgIf]
 })
 

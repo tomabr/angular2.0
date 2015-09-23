@@ -18,7 +18,6 @@ var SearchComponent = (function () {
         });
     }
     SearchComponent.prototype.onSubmit = function () {
-        ;
     };
     SearchComponent = __decorate([
         angular2_1.Component({
@@ -26,7 +25,7 @@ var SearchComponent = (function () {
             viewBindings: [angular2_2.FormBuilder]
         }),
         angular2_1.View({
-            templateUrl: 'search.html',
+            templateUrl: 'templates/search.html',
             directives: [angular2_2.FORM_DIRECTIVES, angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [angular2_2.FormBuilder])
