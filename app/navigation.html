@@ -3,7 +3,7 @@
       <section class="navigation__section">
         <h3 class="navigation__section-title">Main</h3>
         <ul class="navigation__group">
-            <li class="navigation__item _many" *ng-for="#item of menu"><a href="#"><span class="navigation__image {{item.sprite}}"></span>{{item.name}}
+            <li class="navigation__item _many" *ng-for="#item of menu"><a href="#"><span class="navigation__image {{item.sprite}}"></span><span class="navigation__item-name">{{item.name}}</span>
                 <div class="navigation__group _inside">
                     <a href="#" class="navigation__item" *ng-for="#i of item.elem">{{i.name}}</a>
                 </div>
@@ -16,7 +16,7 @@
          <ul class="navigation__group">
           
             <li class="navigation__item _many" *ng-for="#item of accounts"><a href="#" (click)="toogleItems(item)" [class]="active(item.state)">
-            <span class="navigation__image {{item.sprite}}"></span><span>{{item.name}}
+            <span class="navigation__image {{item.sprite}}"></span><span class="navigation__item-name">{{item.name}}
               <span *ng-if="item.badge" class="navigation__badge">{{item.badge}}</span>
               <span *ng-if="!!item.elem.length && !item.state" class="navigation__arrow"></span>
             </a>
