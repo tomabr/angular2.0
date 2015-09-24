@@ -19,9 +19,12 @@
   "devDependencies": {
     "browser-sync": "^2.9.3",
     "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.5",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-tslint": "^3.2.0",
     "gulp-typescript": "^2.8.2",
+    "gulp-uglify": "^1.4.1",
     "superstatic": "^1.2.3"
   }
 }

@@ -7,6 +7,13 @@ var config = require('./gulp.config')();
 
 var browserSync = require('browser-sync');
 var superstatic = require('superstatic');
+var concat = require('gulp-concat');
+ 
+gulp.task('scripts', function() {
+  return gulp.src([config.jsPath + 'jquery.min.js', config.jsPath + 'bootstrap.min.js'] )
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest(config.jsOutputPath));
+});
 
 gulp.task('ts-lint', function() {
 	return gulp.src(config.allTs)
@@ -14,7 +21,7 @@ gulp.task('ts-lint', function() {
 		.pipe(tslint.report('prose', {
 			emitError: false
 		}))
-})
+});
 
 gulp.task('compile-ts', function() {
 	var sourceTsFiles = [
@@ -32,9 +39,9 @@ gulp.task('compile-ts', function() {
 		.pipe(gulp.dest(config.tsOutputPath));
 });
 
-gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
+gulp.task('serve', ['ts-lint', 'compile-ts', 'scripts'], function() {
 	
-	gulp.watch([config.allTs], ['ts-lint', 'compile-ts']);
+	gulp.watch([config.allTs], ['ts-lint', 'compile-ts', 'scripts']);
 	
 	browserSync({
 		port: 3000,
